@@ -97,8 +97,8 @@ const GeometryInput: React.FC<GeometryInputProps> = ({
   const [localGeoJSON, setLocalGeoJSON] = useState<GeoJSON.Geometry | null>(
     null
   );
-  const [center, setCenter] = useState<number[]>([0, 50]);
-  const [zoom, setZoom] = useState<number>(3);
+  const [center, setCenter] = useState<number[]>([40, 0]);
+  const [zoom, setZoom] = useState<number>(2);
   let geojson: GeoJSON.Geometry | null = null;
 
   if (value === "null" || value === undefined) {
@@ -401,7 +401,7 @@ const GeometryInput: React.FC<GeometryInputProps> = ({
       </FieldLabel>
       <div
         id={`map-${name}`}
-        style={{ height: "500px", borderRadius: "4px", overflow: "hidden" }}
+        style={{ height: "700px", borderRadius: "4px", overflow: "hidden" }}
       />
       <FieldHint />
       <FieldError />

@@ -1,8 +1,11 @@
 # strapi-plugin-geometry-fields
 
-A quick description of strapi-plugin-postgis.
+Store and edit geospatial data in a Strapi custom field.
 
-Store geospatial data in a Strapi field.
+The plugin accepts WKT (Well-known text) from the API and stores it as binary (WKB) in the geometry field. 
+It needs PostgreSQL as database and PostGIS installed 
+ 
+
 
 
 
@@ -79,9 +82,12 @@ If you're doing some heavy spatial queries to the api, consider indexing the geo
 
 Indexing
 
-Instead of WKT, you can also send GeoJSON to the api with an array of features if you create a custom controller. You can do something like this: ...
+Instead of WKT, you can also send GeoJSON to the API with an array of features if you create a custom controller. You can do something like this: ...
+
+
 
 Geojson as input
+
 
 ## Todo
 
