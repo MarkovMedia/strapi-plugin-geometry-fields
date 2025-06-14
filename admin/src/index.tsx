@@ -1,6 +1,5 @@
 import type { StrapiApp } from '@strapi/types';
 import type { CustomFieldInputDefinition } from '@strapi/admin/exports';
-import GeometryInput from './components/GeometryInput';
 
 const geometryField: CustomFieldInputDefinition = {
   name: 'geometry',

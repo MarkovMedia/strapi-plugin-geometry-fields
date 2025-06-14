@@ -46,6 +46,8 @@ export default ({ strapi }: { strapi: Strapi }) => {
           attr.customField === "plugin::geometry-fields.geometry"
       );
 
+
+
       if (hasPostgis) {
         uids.push(`api::${apiName}.${apiName}`);
       }
@@ -54,7 +56,10 @@ export default ({ strapi }: { strapi: Strapi }) => {
     return uids;
   };
 
+
+
   const targetContentTypes = getPostgisContentTypes(strapi);
+  console.log("targetContentTypes: ", targetContentTypes)
    targetContentTypes.forEach((uid) => {
     const contentType = (strapi.contentTypes as Record<string, any>)[uid];
 

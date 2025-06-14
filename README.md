@@ -5,9 +5,11 @@ Store and edit geospatial data in a Strapi custom field.
 The plugin accepts WKT (Well-known text) from the API and stores it as binary (WKB) in the geometry field. 
 It needs PostgreSQL as database and PostGIS installed 
  
+Example for: "GEOMETRYCOLLECTION (POINT (40 10),
+LINESTRING (10 10, 20 20, 10 40),
+POLYGON ((40 40, 20 45, 45 30, 40 40)))"
 
-
-
+![Geometry Field in Action](./assets/strapi-plugin-geometry-fields.jpg)
 
 ## Installation
 
