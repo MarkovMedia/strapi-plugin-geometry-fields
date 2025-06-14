@@ -5,7 +5,8 @@
   "strapi": {
     "name": "geometry-fields",
     "description": "Description of geometry-fields plugin",
-    "kind": "plugin"
+    "kind": "plugin",
+    "main": "admin/src"
   },
   "dependencies": {
     "@strapi/design-system": "^1.6.3",
