@@ -1,12 +1,17 @@
 {
   "name": "geometry-fields",
   "version": "0.0.0",
-  "description": "This is the description of the plugin.",
+  "description": "Store and edit geospatial data in a Strapi custom field",
   "strapi": {
     "name": "geometry-fields",
-    "description": "Description of geometry-fields plugin",
+    "description": "Store and edit geospatial data in a Strapi custom field",
     "kind": "plugin",
-    "main": "admin/src"
+    "main": "admin/src",
+    "admin": {
+      "main": "admin/src",
+      "icon": "my-icon",
+      "translations": {}
+    }
   },
   "dependencies": {
     "@strapi/design-system": "^1.6.3",
