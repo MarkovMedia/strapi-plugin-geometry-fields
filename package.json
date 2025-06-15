@@ -1,17 +1,8 @@
 {
   "name": "strapi-plugin-geometry-fields",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Store and edit geospatial data with PostGIS in a Strapi custom field",
-  "strapi": {
-    "name": "geometry-fields",
-    "description": "Store and edit geospatial data with PostGIS in a Strapi custom field",
-    "kind": "plugin",
-    "main": "admin/src",
-    "admin": {
-      "main": "admin/src",
-      "translations": {}
-    }
-  },
+  "main": "strapi-server.js",
   "dependencies": {
     "@strapi/design-system": "^1.6.3",
     "@strapi/helper-plugin": "^4.6.0",
@@ -19,6 +10,12 @@
     "leaflet": "^1.9.4",
     "prop-types": "^15.7.2",
     "wkt": "^0.1.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@strapi/typescript-utils": "^4.6.0",
@@ -31,12 +28,6 @@
     "react-router-dom": "^5.3.4",
     "styled-components": "^5.3.6",
     "typescript": "5.0.4"
-  },
-  "peerDependencies": {
-    "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0",
-    "react-router-dom": "^5.2.0",
-    "styled-components": "^5.2.1"
   },
   "author": {
     "name": "Markov Media"
