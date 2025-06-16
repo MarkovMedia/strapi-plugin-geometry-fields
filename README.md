@@ -2,9 +2,9 @@
 
 **Store and edit geospatial data with PostGIS in a Strapi 4 custom field.**
 
-The plugin accepts WKT (Well-known text) from the API and stores it as binary (WKB). 
+The plugin accepts WKT (Well-known text) from the API and stores it as binary (WKB).
 It needs PostgreSQL as database and PostGIS installed.
-You can use multiple geometry fields in multiple content types
+You can use multiple geometry fields in multiple content types.
 
 Below is an example following this WKT input: "GEOMETRYCOLLECTION (POINT (40 10),
 LINESTRING (10 10, 20 20, 10 40),
@@ -53,12 +53,12 @@ For the Leaflet map and the markers to display you must allow Openstreetmap in y
 
 ### In the code
 
-Add this field to the schema.json of your content type
+Add this field to the schema.json of your content type ('geometry' can be any unique field name)
 
-<pre>{
-  "type": "customField",
-  "customField": "plugin::geometry-fields.geometry"
-}</pre>
+<pre>    "geometry": {
+      "type": "customField",
+      "customField": "plugin::geometry-fields.geometry"
+    },</pre>
 
 ## Tested with
 
@@ -68,10 +68,9 @@ Add this field to the schema.json of your content type
 
 ## License
 
-MIT 
+MIT
 
 ## Todo
 
 - Make Strapi 5 compatible (Currently migrating...)
 - Create & delete features in custom field
-
