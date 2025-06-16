@@ -1,4 +1,4 @@
-# Geometry Fields
+# Introduction
 
 Store and edit geospatial data with PostGIS in a Strapi custom field.
 
@@ -6,11 +6,11 @@ The plugin accepts WKT (Well-known text) from the API and stores it as binary (W
 It needs PostgreSQL as database and PostGIS installed.
 You can use multiple geometry fields in multiple content types
 
-Below is an example with this WKT input: "GEOMETRYCOLLECTION (POINT (40 10),
+Below is an example following this WKT input: "GEOMETRYCOLLECTION (POINT (40 10),
 LINESTRING (10 10, 20 20, 10 40),
 POLYGON ((40 40, 20 45, 45 30, 40 40)))"
 
-![Geometry Field in Action](./assets/strapi-plugin-geometry-fields.jpg)
+![Geometry Field example](https://raw.githubusercontent.com/MarkovMedia/strapi-plugin-geometry-fields/main/assets/strapi-plugin-geometry-fields.jpg)
 
 ## Installation
 
@@ -22,7 +22,7 @@ npm install strapi-plugin-geometry-fields </pre>
 
 ## Configuration
 
-This plugin runs on PostgreSQL and needs PostGIS to be installed. If you haven't already done so run this query in Postgres:
+This plugin only runs with PostgreSQL and needs PostGIS to be installed. If you haven't already done so run this query in Postgres:
 
 <pre>CREATE EXTENSION postgis;</pre>
 
