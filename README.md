@@ -1,8 +1,8 @@
 # Introduction
 
-Store and edit geospatial data with PostGIS in a Strapi custom field.
+**Store and edit geospatial data with PostGIS in a Strapi 4 custom field.**
 
-The plugin accepts WKT (Well-known text) from the API and stores it as binary (WKB) in the geometry field. 
+The plugin accepts WKT (Well-known text) from the API and stores it as binary (WKB). 
 It needs PostgreSQL as database and PostGIS installed.
 You can use multiple geometry fields in multiple content types
 
