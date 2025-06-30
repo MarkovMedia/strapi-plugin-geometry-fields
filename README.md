@@ -1,10 +1,10 @@
-# Introduction
+# Geometry Fields plugin for Strapi
 
-**Store and edit geospatial data with PostGIS in a Strapi 4 custom field.**
+**Store and edit geospatial data with PostGIS in a Strapi v4 custom field.**
 
-The plugin accepts WKT (Well-known text) from the API and stores it as binary (WKB).
-It needs PostgreSQL as database and PostGIS installed.
-You can use multiple geometry fields in multiple content types.
+> **_NOTE:_**  For this plugin supported by Strapi v5, see [@gismark/strapi-geometry-fields](https://www.npmjs.com/package/@gismark/strapi-geometry-fields).
+
+The plugin accepts WKT (Well-known text) from the API and stores it in a PostGIS column in the db table of the content type. You can use multiple geometry fields across different content types. All features are editable and draggable using the hosted [Leaflet.Editable](https://github.com/Leaflet/Leaflet.Editable) and [Path.Drag](https://github.com/Leaflet/Path.Drag.js/).
 
 Below is an example following this WKT input: "GEOMETRYCOLLECTION (POINT (40 10),
 LINESTRING (10 10, 20 20, 10 40),
@@ -14,11 +14,11 @@ POLYGON ((40 40, 20 45, 45 30, 40 40)))"
 
 ## Installation
 
-<pre> # with yarn
-yarn add strapi-plugin-geometry-fields </pre>
-
 <pre> # with npm
 npm install strapi-plugin-geometry-fields </pre>
+
+<pre> # with yarn
+yarn add strapi-plugin-geometry-fields </pre>
 
 ## Configuration
 
@@ -26,7 +26,7 @@ This plugin only runs with PostgreSQL and needs PostGIS to be installed. If you 
 
 <pre>CREATE EXTENSION postgis;</pre>
 
-For the Leaflet map and the markers to display you must allow Openstreetmap in your middlewares.js like so:
+For the Leaflet map and the markers to display you must allow Openstreetmap in your middlewares.js. Update "strapi::security" like so:
 
 <pre>
   {
@@ -58,7 +58,19 @@ Add this field to the schema.json of your content type ('geometry' can be any un
 <pre>    "geometry": {
       "type": "customField",
       "customField": "plugin::geometry-fields.geometry"
-    },</pre>
+    }</pre>
+
+    ## Examples
+
+### input as WKT
+
+<pre>
+{ 
+  "data": {
+    "geometry": { wkt: "POINT (30 10)" }   
+  }
+}
+</pre>
 
 ## Tested with
 
@@ -72,5 +84,8 @@ MIT
 
 ## Todo
 
-- Make Strapi 5 compatible (Currently migrating...)
+- Add GeoJSON support
+- Validate WKT / GeoJSON option
+- Choose CRS (Coordinate Reference System) from settings
 - Create & delete features in custom field
+- Click feature shows popup with geo info
