@@ -7,11 +7,11 @@ const geometryField: CustomFieldInputDefinition = {
   type: 'json',
   intlLabel: {
     id: 'geometry.label',
-    defaultMessage: 'Geometry',
+    defaultMessage: 'Geometry Fields',
   },
   intlDescription: {
     id: 'geometry.description',
-    defaultMessage: 'Stores spatial data using PostGIS',
+    defaultMessage: 'Store and edit geospatial data with PostGIS in a Strapi 4 custom field.',
   },
   components: {
     Input: async () => import('./components/GeometryInput'),

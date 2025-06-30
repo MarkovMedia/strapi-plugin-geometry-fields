@@ -2,9 +2,10 @@
   "name": "strapi-plugin-geometry-fields",
   "version": "1.0.7",
   "description": "Store and edit geospatial data with PostGIS in a Strapi custom field",
+  "displayName": "Geometry Fields",   
   "strapi": {
     "name": "geometry-fields",
-    "description": "Store and edit geospatial data with PostGIS in a Strapi custom field",
+    "description": "Store and edit geospatial data with PostGIS in a Strapi 4 custom field",
     "kind": "plugin",
     "main": "admin/src",
     "admin": {
